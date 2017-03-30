@@ -1,0 +1,2 @@
+global myList
+myList = []

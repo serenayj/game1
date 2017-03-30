@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+        <h1>Get a user name! </h1>
+        <form method="POST" class="post-form">
+        	{% csrf_token %}
+            {{form.username}}
+            <button type="submit" class="save btn btn-default" id = "sign-in" onclick = "myFunc()">Save</button>
+            <script>
+            function myFunc(){
+        alert("You are in the waiting list!!!");
+    }
+            </script>
+        </form>
+    {% endblock %}

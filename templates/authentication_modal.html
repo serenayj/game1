@@ -1,0 +1,108 @@
+{% block extralib %}
+{% endblock %}
+
+<div class="modal fade" id="authentication_modal" tabindex="-1" role="dialog" aria-hidden="true" >
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="min-width:500px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                <h4 class="modal-title">Sign in or Sign up</h4>
+            </div>
+            <div class="modal-body" > 
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#sign_in_tab" data-toggle="tab">Sign in</a></li>
+                    <li><a href="#sign_up_tab" data-toggle="tab">Sign up</a></li>
+                </ul>
+                <br />
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="sign_in_tab">
+                        <div class="row">   
+                            <div class="col-sm-12">
+                                <form id="sign_in_form" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Username</label>
+                                        <div class="col-sm-8">
+                                            <input id="sign-in-email" type="text" class="form-control" placeholder="Email address as user name" name="username" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Password</label>
+                                        <div class="col-sm-8">
+                                            <input id="sign-in-password" type="password" class="form-control" placeholder="Password" name="password" />
+                                            <p class="text-muted"><a href="#">Forgot password?</a></p> 
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <button  id="sign-in-btn" type="submit" name="submitButton" style="width:100%" class="btn btn-primary">Sign in</button>
+                                        </div>
+                                        <div class="col-sm-10 col-sm-offset-1"><small style="color:#b94a48;" id="sign-in-error-msg"></small></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="sign_up_tab">
+                        <form id="sign_up_form" method="post" class="form-horizontal" action ="register/">
+                            <div class="form-group">
+                                <div class="col-sm-3 col-sm-offset-9"><small style="color:#b94a48;">* Required</small></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><small style="color:#b94a48;">*</small>Email as Username</label>
+                                <div class="col-sm-8">
+                                    <input id="sign-up-email" type="text" class="form-control" name="email" />
+                                    <span id="helpBlock" class="help-block">
+                                        Please make sure the email address is correct. It will be your credential for login and password recovery. It will be invisible to others.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">First Name</label>
+                                <div class="col-sm-8">
+                                    <input id="sign-up-firstname" type="text" class="form-control" name="firstname" />
+                                </div>
+                            </div>
+                            <div class="form-group">  
+                                <label class="col-sm-3 control-label">Last Name</label>
+                                <div class="col-sm-8">
+                                    <input id="sign-up-lastname" type="text" class="form-control" name="lastname" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><small style="color:#b94a48;">*</small>Password</label>
+                                <div class="col-sm-8">
+                                    <input id="sign-up-password" type="password" class="form-control" name="password"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label"><small style="color:#b94a48;">*</small>Retype Password</label>
+                                <div class="col-sm-8">
+                                    <input type="password" class="form-control" name="confirmPassword"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Self-Introduction</label>
+                                <div class="col-sm-8">
+                                    <textarea id="sign-up-userinfo" class="form-control" rows="5" placeholder="e.g. your occupation/title, your neighborhood info, your hobby..." name="userinfo"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-1">
+                                    <button id="sign-up-btn" type="submit" name="submitButton" style="width:100%" class="btn btn-primary">Sign up</button>
+                                    <small style="color:#b94a48;" id="sign-up-error-msg"></small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
